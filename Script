@@ -1,0 +1,37 @@
+const getSleepHours=day=>{
+switch("day"){
+case "monday":
+return 6;
+break;
+case "tuesday":
+return 2;break;
+case "wednesday":
+return 2;break;
+case "thursday":
+return 8;break;
+case "friday":
+return 9;break;
+case "saturday":
+return 15;break;
+default:return 15}
+
+}
+const getActualSleepHours=()=>
+  6+2+2+9+15+15;
+
+
+const getIdealSleepHours=()=>{
+var idealHours=8;
+return idealHours*7;};
+
+function calculateSleepDebt(){
+  var actualSleepHours=getActualSleepHours();
+
+  var idealSleepHours=getIdealSleepHours();
+  if (actualSleepHours===idealSleepHours){console.log("Dormis lo necesario porque seguro te rascas la cajeta");}
+  else if (actualSleepHours>idealSleepHours){console.log (" dormiste "+ (actualSleepHours-idealSleepHours) +"horas de mas porque seguro te rascas la cajeta")}
+ else  {console.log("dormiste " +(idealSleepHours-actualSleepHours)+ " horas de menos porque seguro sos un negre esclave pute");}
+
+}
+calculateSleepDebt()
+
